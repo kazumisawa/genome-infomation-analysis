@@ -1,2 +1,2 @@
-# genomic-sequence-analysis
-Scripts for a textbook "Genome Informatics Analysis"
+genome-infomation-analysis
+Scripts for a textbook "Genome Information Analysis"
