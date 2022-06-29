@@ -4,7 +4,7 @@ Entrez.email = sys.argv[1]
 database = sys.argv[2]
 target = sys.argv[3]
 with Entrez.efetch(db=database,
-    id=target, rettype="gb",
+    id=target, rettype="fasta",
     retmode="text") as genbank:
     getData = genbank.readlines()
 for i in getData:
