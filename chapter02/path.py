@@ -11,7 +11,6 @@ import wordlist2seq
 import time
 
 wordLength = 5
-repeat = int(sys.argv[2])
 
 kmerList = list()
 for seq_record in SeqIO.parse(sys.argv[1],"fasta"):
