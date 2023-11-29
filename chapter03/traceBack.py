@@ -11,7 +11,7 @@ def traceBack( direction ): #pathをたどる
     # 左斜め上、上、左を使った時のコードを0, 1, 2とする。
     upleft, up, left = 0, 1, 2
     # 行列の右上から左下に向かって埋めていく
-    while x >= 0 and y >= 0:
+    while x > 0 and y > 0:
         status = direction[x, y] 
         # statusの値に応じて次のステップを指定
         if status == upleft:
@@ -23,3 +23,4 @@ def traceBack( direction ): #pathをたどる
         path1.append( x )
         path2.append( y )
     return path1, path2
+    
