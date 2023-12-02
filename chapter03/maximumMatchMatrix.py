@@ -21,8 +21,6 @@ def maximumMatchMatrix(S, d):
             compare[ up     ] = F[i,  j+1] - d
             compare[ left   ] = F[i+1,j  ] - d
             status = np.argmax(compare)
-            print( i+1, j+1 , compare, status )
             F[i+1,j+1] = compare[ status ]
             direction[i+1,j+1] = status
-    print(F)
     return direction
