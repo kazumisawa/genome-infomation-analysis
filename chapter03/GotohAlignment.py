@@ -5,6 +5,7 @@ import scoreMatrix
 import putGap
 import affineGapMatchMatrix as am
 import traceBack
+import fastaOutput as fa
 
 data = list()
 for seq_record in SeqIO.parse(sys.argv[1],"fasta"):
