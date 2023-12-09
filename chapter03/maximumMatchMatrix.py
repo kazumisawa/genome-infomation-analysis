@@ -23,4 +23,7 @@ def maximumMatchMatrix(S, d):
             status = np.argmax(compare)
             F[i+1,j+1] = compare[ status ]
             direction[i+1,j+1] = status
+    # goalを-1にする
+    goal = -1
+    direction[0, 0] = goal
     return direction
