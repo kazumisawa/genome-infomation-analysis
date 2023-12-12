@@ -6,8 +6,8 @@ def FFTblock(region, len1, len2):
     range1, range2 = list(), list()
     if region != None and len(region)>0 :
         pos1, pos2, S =  se.segmentMatrix(region)
-        F, P, Q = af.affineGapMatchMatrix(S, 10, 10)
-        trace1, trace2 = traceBack.traceBack( F )
+        direction = af.affineGapMatchMatrix(S, 10, 10)
+        trace1, trace2 = traceBack.traceBack( direction )
         for i in range( len(trace1)-1 ):
             start1 = int(pos1[ trace1[i]-1 ])
             start2 = int(pos2[ trace2[i]-1 ])
