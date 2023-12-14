@@ -2,8 +2,7 @@ import scoreMatrix as sc
 import affineGapMatchMatrix as am
 import putGap
 import traceBack
-#import needlemanWunsch as nw
-#import gotoh82
+
 def nestedAlignment(seq1, range1, seq2, range2, v, w):
     #aligned sequences
     result1, result2 = list(), list()
@@ -11,7 +10,6 @@ def nestedAlignment(seq1, range1, seq2, range2, v, w):
         S = sc.scoreMatrix(seq1, range1[i], seq2, range2[i] )
         direction = am.affineGapMatchMatrix(S, v, w)
         path1, path2 = traceBack.traceBack( direction )
-        print(range1)
         partial1 = seq1[ range1[i][0]:range1[i][1] ]
         partial2 = seq2[ range2[i][0]:range2[i][1] ]
         segment1 =  putGap.putGap( partial1, path1 )
