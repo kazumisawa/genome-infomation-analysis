@@ -3,11 +3,12 @@ def putGap(org, reverse): #pathをたどる
     forward = reverse[::-1] 
     result = list()
     #アラインメントされたかどうか記録するlist
-    notAligned = [True] * len(org)
+    sequence = "$" + org 
+    notAligned = [True] * len(sequence) 
     for x in forward:
         if notAligned[x] : #未アライン
-            result.append( org[x] )
+            result.append( sequence[x] )
         else: #既にアラインメントされていればギャップを入れる 
             result.append( "-" )
         notAligned[x] = False
-    return "".join(result)
+    return "".join( result[1:] )
