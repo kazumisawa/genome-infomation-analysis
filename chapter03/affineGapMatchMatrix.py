@@ -1,5 +1,4 @@
 import numpy as np
-import outputMatrix as om
 
 def affineGapMatchMatrix(S, u, v):
     len1, len2 = S.shape #tate, yoko
